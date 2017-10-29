@@ -21,6 +21,11 @@ public class LoginActivity extends AppCompatActivity implements LoginView,View.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         presenter = new LoginPresenterImpl(this);
+
+        progressBar = (ProgressBar) findViewById(R.id.progress);
+        username = (EditText) findViewById(R.id.username);
+        password = (EditText) findViewById(R.id.password);
+        findViewById(R.id.button).setOnClickListener(this);
     }
 
     @Override
